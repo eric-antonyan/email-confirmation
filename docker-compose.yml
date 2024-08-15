@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+    db:
+        image: postgres:13
+        ports:
+            - 6060:5432
+        environment:
+            POSTGRES_USER: eric_antonyan
+            POSTGRES_PASSWORD: ambulance
+            POSTGRES_DB: authentication
+        networks:
+            - AntonyanApps
+
+networks:
+    AntonyanApps:
